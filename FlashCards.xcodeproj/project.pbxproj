@@ -11,6 +11,7 @@
 		4DB6ECC92763B3B200C64F66 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6ECC82763B3B200C64F66 /* ContentView.swift */; };
 		4DB6ECCB2763B3B700C64F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB6ECCA2763B3B700C64F66 /* Assets.xcassets */; };
 		4DB6ECCE2763B3B700C64F66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB6ECCD2763B3B700C64F66 /* Preview Assets.xcassets */; };
+		4DB6ECD72763B62400C64F66 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB6ECD62763B62400C64F66 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4DB6ECC82763B3B200C64F66 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4DB6ECCA2763B3B700C64F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DB6ECCD2763B3B700C64F66 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4DB6ECD62763B62400C64F66 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +54,9 @@
 			isa = PBXGroup;
 			children = (
 				4DB6ECC62763B3B200C64F66 /* FlashCardsApp.swift */,
-				4DB6ECCA2763B3B700C64F66 /* Assets.xcassets */,
 				4DB6ECD42763B4CD00C64F66 /* Model */,
 				4DB6ECD52763B4E500C64F66 /* Views */,
+				4DB6ECCA2763B3B700C64F66 /* Assets.xcassets */,
 				4DB6ECCC2763B3B700C64F66 /* Preview Content */,
 			);
 			path = FlashCards;
@@ -71,6 +73,7 @@
 		4DB6ECD42763B4CD00C64F66 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4DB6ECD62763B62400C64F66 /* Card.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DB6ECC92763B3B200C64F66 /* ContentView.swift in Sources */,
+				4DB6ECD72763B62400C64F66 /* Card.swift in Sources */,
 				4DB6ECC72763B3B200C64F66 /* FlashCardsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
