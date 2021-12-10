@@ -8,19 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    //mark: stored properties
+    var currentCard = listOfCards.randomElement()!
+        
+        
+    //mark: computed properties
+    
+    
     var body: some View {
         ScrollView{
             // Show questions
-            Text("What is the \"prowerhouse\" of a cell?")
+            Text(currentCard.question)
                 .font(.largeTitle)
                 .multilineTextAlignment(.center)
             
             //Check answer
             Button(action: {
-                // NOTE: Output will not be shown unless this app is run in the "full" simulator
-                print("Button was pressed")
+    
             }, label: {
                 Text("Check")
+            })
+                .buttonStyle(.plain)
+            
+            
+            Text(currentCard.answer)
+                .font(.largeTitle)
+                .multilineTextAlignment(.center)
+            
+            //Check answer
+            Button(action: {
+    
+            }, label: {
+                Text("Another")
             })
                 .buttonStyle(.plain)
             
