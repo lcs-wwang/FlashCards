@@ -52,8 +52,9 @@
 			isa = PBXGroup;
 			children = (
 				4DB6ECC62763B3B200C64F66 /* FlashCardsApp.swift */,
-				4DB6ECC82763B3B200C64F66 /* ContentView.swift */,
 				4DB6ECCA2763B3B700C64F66 /* Assets.xcassets */,
+				4DB6ECD42763B4CD00C64F66 /* Model */,
+				4DB6ECD52763B4E500C64F66 /* Views */,
 				4DB6ECCC2763B3B700C64F66 /* Preview Content */,
 			);
 			path = FlashCards;
@@ -65,6 +66,21 @@
 				4DB6ECCD2763B3B700C64F66 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DB6ECD42763B4CD00C64F66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4DB6ECD52763B4E500C64F66 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4DB6ECC82763B3B200C64F66 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
