@@ -15,7 +15,7 @@ struct card{
 
 //define a list of cards to quiz with
 let listOfCards = [
-    card(question: "What is thew \"powerhouse\" of a cell?",
+    card(question: "What is the \"powerhouse\" of a cell?",
      answer: "Mitochondria")
     ,
     card(question: "What is hydrolisis?",

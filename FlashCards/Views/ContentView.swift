@@ -10,7 +10,9 @@ import SwiftUI
 struct ContentView: View {
     
     //mark: stored properties
-    var currentCard = listOfCards.randomElement()!
+    
+    @State var currentCard = listOfCards.randomElement()!
+    
         
         
     //mark: computed properties
@@ -24,12 +26,15 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
             
             //Check answer
-            Button(action: {
-    
-            }, label: {
-                Text("Check")
-            })
-                .buttonStyle(.plain)
+            if #available(iOS 15.0, *) {
+                Button(action: {
+                }, label: {
+                    Text("Check")
+                })
+                    .buttonStyle(.bordered)
+            } else {
+                // Fallback on earlier versions
+            }
             
             
             Text(currentCard.answer)
@@ -37,12 +42,16 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
             
             //Check answer
-            Button(action: {
-    
-            }, label: {
-                Text("Another")
-            })
-                .buttonStyle(.plain)
+            if #available(iOS 15.0, *) {
+                Button(action: {
+                    currentCard = listOfCards.randomElement()!
+                }, label: {
+                    Text("Another")
+                })
+                    .buttonStyle(.bordered)
+            } else {
+                // Fallback on earlier versions
+            }
             
         }
         .padding()
