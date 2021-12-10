@@ -13,7 +13,8 @@ struct ContentView: View {
     
     @State var currentCard = listOfCards.randomElement()!
     
-        
+    // this controls whether the answer is visible
+    @State var isAnswerShowing = false
         
     //mark: computed properties
     
@@ -32,14 +33,13 @@ struct ContentView: View {
                     Text("Check")
                 })
                     .buttonStyle(.bordered)
-            } else {
-                // Fallback on earlier versions
-            }
+        } else {}
             
             
             Text(currentCard.answer)
                 .font(.largeTitle)
                 .multilineTextAlignment(.center)
+                .opacity(isAnswerShowing ? 1.0 : 0.0)
             
             //Check answer
             if #available(iOS 15.0, *) {
@@ -49,9 +49,8 @@ struct ContentView: View {
                     Text("Another")
                 })
                     .buttonStyle(.bordered)
-            } else {
-                // Fallback on earlier versions
-            }
+        } else {}
+            
             
         }
         .padding()
