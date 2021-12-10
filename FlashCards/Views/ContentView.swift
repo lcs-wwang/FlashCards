@@ -29,6 +29,8 @@ struct ContentView: View {
             //Check answer
             if #available(iOS 15.0, *) {
                 Button(action: {
+                    //reveal the answer
+                    isAnswerShowing = true
                 }, label: {
                     Text("Check")
                 })
@@ -45,11 +47,16 @@ struct ContentView: View {
             if #available(iOS 15.0, *) {
                 Button(action: {
                     currentCard = listOfCards.randomElement()!
+                    
+                    isAnswerShowing = false
                 }, label: {
                     Text("Another")
                 })
+                    .opacity(isAnswerShowing ? 1.0 : 0.0)
                     .buttonStyle(.bordered)
-        } else {}
+        } else {
+        }
+            
             
             
         }
