@@ -8,7 +8,9 @@
 import Foundation
 
 //define the informations we'll track for a card.
-struct card{
+//"Blieprint" for a card
+//We make card conform to the Equatable protocol
+struct card: Equatable{
     let question: String
     let answer: String
 }

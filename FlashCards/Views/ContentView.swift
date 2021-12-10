@@ -13,6 +13,9 @@ struct ContentView: View {
     
     @State var currentCard = listOfCards.randomElement()!
     
+    //What is the previous card?
+    @State var previousCard = listOfCards.randomElement()!
+    
     // this controls whether the answer is visible
     @State var isAnswerShowing = false
         
@@ -36,7 +39,6 @@ struct ContentView: View {
             if #available(iOS 15.0, *) {
                 Button(action: {
                     //reveal the answer
-                    isAnswerShowing = true
                     withAnimation{
                         isAnswerShowing = true
                     }
@@ -56,7 +58,16 @@ struct ContentView: View {
             //Check answer
             if #available(iOS 15.0, *) {
                 Button(action: {
-                    currentCard = listOfCards.randomElement()!
+                    //Keep track of the previous question
+                    previousCard = currentCard
+                    
+                    //Loop forever until it picks a different new card!
+                    //Use thw condition to say "keep looping when this condition is true"
+                    while previousCard == currentCard {
+                        currentCard = listOfCards.randomElement()!
+                    }
+                    
+                    
                     
                     isAnswerShowing = false
                 }, label: {
