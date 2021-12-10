@@ -22,15 +22,25 @@ struct ContentView: View {
     var body: some View {
         ScrollView{
             // Show questions
-            Text(currentCard.question)
-                .font(.largeTitle)
-                .multilineTextAlignment(.center)
+            HStack{
+                Spacer()
+                
+                Text(currentCard.question)
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                
+                Spacer()
+            }
             
             //Check answer
             if #available(iOS 15.0, *) {
                 Button(action: {
                     //reveal the answer
                     isAnswerShowing = true
+                    withAnimation{
+                        isAnswerShowing = true
+                    }
+                    
                 }, label: {
                     Text("Check")
                 })
